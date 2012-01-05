@@ -6,10 +6,43 @@
   <packaging>war</packaging>
   
   <properties>
+    <SOURCE_VERSION>1.6</SOURCE_VERSION>
+	<TARGET_VERSION>1.6</TARGET_VERSION>
 	<encoding>UTF-8</encoding>
 	<spring.version>3.1.0.RELEASE</spring.version>
 	<junit.version>4.9</junit.version>
   </properties>
+  
+  <build>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-resources-plugin</artifactId>
+			<configuration>
+				<encoding>${encoding}</encoding>
+			</configuration>
+		</plugin>
+
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>2.3.2</version>
+			<configuration>
+				<source>${SOURCE_VERSION}</source>
+				<target>${TARGET_VERSION}</target>
+				<encoding>${encoding}</encoding>
+			</configuration>
+		</plugin>
+
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-deploy-plugin</artifactId>
+			<configuration>
+				<updateReleaseInfo>true</updateReleaseInfo>
+			</configuration>
+		</plugin>
+	</plugins>
+  </build>
 
   <dependencies>
     <dependency>
