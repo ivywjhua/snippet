@@ -12,5 +12,6 @@ public class AppContextTest {
 		String hello = flightService.sayHello("flight");
 		System.out.println(hello);
 		
+		
 	}
 }
