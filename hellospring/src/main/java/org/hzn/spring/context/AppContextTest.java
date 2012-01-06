@@ -11,5 +11,6 @@ public class AppContextTest {
 		FlightService flightService = con.getBean(FlightService.class);
 		String hello = flightService.sayHello("flight");
 		System.out.println(hello);
+		
 	}
 }
