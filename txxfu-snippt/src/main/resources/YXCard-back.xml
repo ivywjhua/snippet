@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
+<yxcard>
 <menu id="PPC-NEW-SALE-CARD" name="新售卡" />
 
-<menu id="PPC-NSC-OM" name="订单管理" sort="1" parent="PPC-NEW-SALE-CARD" />
+<menu id="PPC-NSC-OM" name="订单管理" sort="1" parent="PPC-NEW-SALE-CARD"/>
 <menu id="PPC-NSC-OM-QUERY" name="订单管理-订单查询" sort="12" parent="PPC-NSC-OM" actionUrl="/order/bgorderlist.do"/>
 <menu id="PPC-NSC-OM-DETAIL" name="订单管理-订单详情" sort="13" parent="PPC-NSC-OM" actionUrl="/order/bgorderdetail.do"/>
 <menu id="PPC-NSC-OM-HIS" name="订单管理-审批记录" sort="14" parent="PPC-NSC-OM" actionUrl="/order/bgorderhistory.do"/>
 <menu id="PPC-NSC-OM-ACT-REC" name="订单管理-激活记录" sort="15" parent="PPC-NSC-OM" actionUrl="/order/bgcardsegactivation.do"/>
 <menu id="PPC-NSC-OM-ASS-REC" name="订单管理-分配记录" sort="16" parent="PPC-NSC-OM" actionUrl="/order/bgcardsegdistribution.do"/>
+
+</yxcard>
