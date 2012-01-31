@@ -67,8 +67,32 @@ public class UAMSqlGenrateTool {
 				link.setPrivId(String.valueOf(privId++));
 			}
 		}
-//		 printMenu(menu);
+		// printMenu(menu);
 
+		generateSeqSql(menuIdStart, seqIncr, sqlId);
+
+		generateSql(menu);
+
+		genrateDelSql(menuIdStart, privIdStart, sqlId, privId);
+
+		// printMenu(menu);
+
+	}
+
+	private static void genrateDelSql(Long menuIdStart, Long privIdStart,
+			Long sqlId, Long privId) throws IOException {
+		StringBuilder delSql = new StringBuilder("-- del sql \n");
+		delSql.append("DELETE FROM tb_adm_permission t WHERE t.id >= "
+				+ privIdStart + " AND t.id < " + privId + ";\n");
+		delSql.append("DELETE FROM tb_adm_menu t WHERE t.id >= " + menuIdStart
+				+ " AND t.id < " + sqlId + ";");
+		System.out.println(delSql);
+		FileUtils.writeStringToFile(new File("data/sql/del.sql"),
+				delSql.toString(), CharEncoding.UTF_8);
+	}
+
+	private static void generateSeqSql(Long menuIdStart, int seqIncr, Long sqlId)
+			throws IOException {
 		Long menuCount = sqlId - menuIdStart;
 		Long seqGap = menuCount + seqIncr;
 		StringBuilder seqSql = new StringBuilder("-- seq sql \n");
@@ -84,20 +108,6 @@ public class UAMSqlGenrateTool {
 		System.out.println(seqSql);
 		FileUtils.writeStringToFile(new File("data/sql/seq.sql"),
 				seqSql.toString(), CharEncoding.UTF_8);
-
-		generateSql(menu);
-
-		StringBuilder delSql = new StringBuilder("-- del sql \n");
-		delSql.append("DELETE FROM tb_adm_permission t WHERE t.id >= "
-				+ privIdStart + " AND t.id < " + privId + ";\n");
-		delSql.append("DELETE FROM tb_adm_menu t WHERE t.id >= " + menuIdStart
-				+ " AND t.id < " + sqlId + ";");
-		System.out.println(delSql);
-		FileUtils.writeStringToFile(new File("data/sql/del.sql"),
-				delSql.toString(), CharEncoding.UTF_8);
-
-//		 printMenu(menu);
-
 	}
 
 	static void generateSql(Menu menu) throws IOException {
