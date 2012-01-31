@@ -13,7 +13,9 @@
 	<TARGET_VERSION>1.6</TARGET_VERSION>
 	<encoding>UTF-8</encoding>
 	<spring.version>3.1.0.RELEASE</spring.version>
+	<digester.version>2.1</digester.version>
 	<junit.version>4.9</junit.version>
+	<commons-lang.version>2.6</commons-lang.version>
   </properties>
   
   <build>
@@ -52,6 +54,16 @@
 		<groupId>org.springframework</groupId>
 		<artifactId>spring-context</artifactId>
 		<version>${spring.version}</version>
+	</dependency>
+    <dependency>
+		<groupId>commons-digester</groupId>
+		<artifactId>commons-digester</artifactId>
+		<version>${digester.version}</version>
+	</dependency>
+    <dependency>
+		<groupId>commons-lang</groupId>
+		<artifactId>commons-lang</artifactId>
+		<version>${commons-lang.version}</version>
 	</dependency>
     <dependency>
 		<groupId>org.springframework</groupId>
