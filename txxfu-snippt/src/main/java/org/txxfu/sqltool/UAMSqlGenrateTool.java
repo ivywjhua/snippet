@@ -1,8 +1,11 @@
 package org.txxfu.sqltool;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.digester.Digester;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang.CharEncoding;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.Resource;
@@ -64,7 +67,7 @@ public class UAMSqlGenrateTool {
 				link.setPrivId(String.valueOf(privId++));
 			}
 		}
-		// printMenu(menu);
+//		 printMenu(menu);
 
 		Long menuCount = sqlId - menuIdStart;
 		Long seqGap = menuCount + seqIncr;
@@ -79,6 +82,8 @@ public class UAMSqlGenrateTool {
 		seqSql.append("SELECT SEQ_ADM_PERMISSION.NEXTVAL FROM DUAL;\n");
 		seqSql.append("ALTER SEQUENCE SEQ_ADM_PERMISSION INCREMENT BY 1;\n");
 		System.out.println(seqSql);
+		FileUtils.writeStringToFile(new File("data/sql/seq.sql"),
+				seqSql.toString(), CharEncoding.UTF_8);
 
 		generateSql(menu);
 
@@ -88,12 +93,14 @@ public class UAMSqlGenrateTool {
 		delSql.append("DELETE FROM tb_adm_menu t WHERE t.id >= " + menuIdStart
 				+ " AND t.id < " + sqlId + ";");
 		System.out.println(delSql);
-		
-		// printMenu(menu);
+		FileUtils.writeStringToFile(new File("data/sql/del.sql"),
+				delSql.toString(), CharEncoding.UTF_8);
+
+//		 printMenu(menu);
 
 	}
 
-	static void generateSql(Menu menu) {
+	static void generateSql(Menu menu) throws IOException {
 		StringBuilder menuSql = new StringBuilder("-- menu sql \n");
 		StringBuilder privSql = new StringBuilder("-- priv sql \n");
 		generateSql0(menu, menuSql, privSql, 0);
@@ -108,6 +115,10 @@ public class UAMSqlGenrateTool {
 		}
 		System.out.println(menuSql);
 		System.out.println(privSql);
+		FileUtils.writeStringToFile(new File("data/sql/menu.sql"),
+				menuSql.toString(), CharEncoding.UTF_8);
+		FileUtils.writeStringToFile(new File("data/sql/priv.sql"),
+				privSql.toString(), CharEncoding.UTF_8);
 	}
 
 	private static void generateSql0(Menu menu, StringBuilder menuSql,
@@ -139,7 +150,6 @@ public class UAMSqlGenrateTool {
 	private static void generatePrivSql0(StringBuilder sql, String tSqlId,
 			String tPrivId, String tId, String tName) {
 		String priv1 = "insert into tb_adm_permission (ID, PERMISSION_KEY, DESCRIPTION, STATUS, MENU_ID, CREATOR, GMT_CREATE, GMT_MODIFIED, MEMO)\n";
-		// String priv2 =
 		// "values ('60632', 'PPC-NSC-OM-QUERY-P', '订单管理-订单查询', 'Y', '168232', 'SNDA-wangjinhua', '2011-12-28 14:50:33.000000', '2011-12-28 14:50:40.000000', '');\n\n";
 		String priv2 = "values ('"
 				+ tPrivId
@@ -159,7 +169,6 @@ public class UAMSqlGenrateTool {
 			String tId, String tName, String tSort, String tActionUrl,
 			String tActionType, String tContextPath, String tParentId) {
 		String menu1 = "insert into tb_adm_menu (ID, MENU_CODE, MENU_NAME, ACTION_URL, IMG_URL, SORT, DESCRIPTION, STATUS, ACTION_TYPE, PARENT_ID, CREATOR, GMT_CREATE, GMT_MODIFIED, MEMO)\n";
-		// String val =
 		// "values ('168231', 'PPC-NSC-OM', '订单管理', '#', '', '1', '', 'Y', 'M', '168230', 'SNDA-wangjinhua', '2011-12-28 14:42:29.000000', '2011-12-28 14:42:29.000000', '');";
 		String menu2 = "values ('"
 				+ tSqlId
