@@ -1,0 +1,8 @@
+1. get seq value
+	SEQ_ADM_MENU
+	SEQ_ADM_PERMISSION
+
+2. calu the gap
+
+3. fix CONTEXT_PATH
+
