@@ -7,6 +7,16 @@
 		<menu id="PPC-NSC-OM-HIS" name="订单管理-审批记录" sort="14" actionUrl="/order/bgorderhistory.do"/>
 		<menu id="PPC-NSC-OM-ACT-REC" name="订单管理-激活记录" sort="15" actionUrl="/order/bgcardsegactivation.do"/>
 		<menu id="PPC-NSC-OM-ASS-REC" name="订单管理-分配记录" sort="16" actionUrl="/order/bgcardsegdistribution.do"/>
+		<!-- allocate card -->
+		<menu id="PPC-NSC-OM-AC-LIST" name="销售分配卡号" sort="17" actionUrl="/sale/cardallocatedorderlist.do"/>
+		<menu id="PPC-NSC-OM-AC-DETAIL" name="销售分配卡号详情" sort="0" actionUrl="/sale/cardallocatedorderdetail.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-AC-HIS" name="销售分配卡号段订单记录" sort="0" actionUrl="/sale/cardallocatedorderhistory.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-AC-CANCEL" name="销售分配卡号段取消订单" sort="0" actionUrl="/sale/cardallocatedordercancel.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-AC-AUTO" name="销售自动分配卡号" sort="0" actionUrl="/sale/allocatedcardsegment.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-AC-MANUAL" name="销售手动分配卡号" sort="0" actionUrl="/sale/manualalloccardseg.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-AC-AFILL" name="自动填充卡号段" sort="0" actionUrl="/sale/autocardsegalloc.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-AC-ASAVE" name="保存自动分配卡号" sort="0" actionUrl="/sale/saveautocardsegalloc.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-AC-MSAVE" name="保存手动分配卡号" sort="0" actionUrl="/sale/savemanualcardsegalloc.do" actionType="B"/>
 	</menu>
 	<menu id="PPC-NSC-OM-VER" name="订单审核" sort="2">
 		<!-- sale -->
@@ -82,6 +92,13 @@
 		<menu id="PPC-NSC-E-CKU-DETAIL" name="窜卡解封申请详细" sort="0" actionUrl="/event/ck/ckud.htm" actionType="B"/>
 		<menu id="PPC-NSC-E-CKU-UNFREEZE" name="窜卡解封" sort="0" actionUrl="/event/ck/uaUnfreeze.htm" actionType="B"/>
 		<menu id="PPC-NSC-E-CKU-DENIED" name="窜卡解封不通过" sort="0" actionUrl="/event/ck/uaDenied.htm" actionType="B"/>
+		<!-- permant lock -->
+		<menu id="PPC-NSC-E-PL-LIST" name="永久封卡事件列表" sort="75" actionUrl="/event/permantlocklist.do"/>
+		<menu id="PPC-NSC-E-PL-ADD" name="新增永久封卡事件" sort="0" actionUrl="/event/addpermantlockevent.do" actionType="B"/>
+		<menu id="PPC-NSC-E-PL-INSERT" name="新增永久封卡事件" sort="0" actionUrl="/event/insertpermantlockevent.do" actionType="B"/>
+		<menu id="PPC-NSC-E-PL-CARD-DETAIL" name="事件详情" sort="0" actionUrl="/event/eventdetail.do" actionType="B"/>
+		<menu id="PPC-NSC-E-PL-CARD-LOCK" name="永久封卡" sort="0" actionUrl="/event/dopermantlock.do" actionType="B"/>
+		<menu id="PPC-NSC-E-PL-CARD-CHECK" name="永久封卡检查" sort="0" actionUrl="/event/checkCardNo.do" actionType="B"/>
 	</menu>
 	<menu id="PPC-NSC-SQ" name="库存查询" sort="8">
 		<menu id="PPC-NSC-SQ-Q" name="库存查询-查询" sort="81" actionUrl="/storage/query.do"/>

@@ -15,7 +15,7 @@ import org.xml.sax.SAXException;
 public class UAMSqlGenrateTool {
 
 	private static final String MENU_CLASS = "org.txxfu.sqltool.Menu";
-	private static final String CONTEXT_PATH = "http://localtest:8088/management";
+	private static final String CONTEXT_PATH = "http://localtest:8088/yxcard-management-web";
 	private static ResourceLoader resourceLoader = new DefaultResourceLoader();
 
 	static Menu parseMenu() throws IOException, SAXException {
@@ -50,8 +50,8 @@ public class UAMSqlGenrateTool {
 	}
 
 	public static void main(String[] args) throws IOException, SAXException {
-		Long menuIdStart = 168250L;
-		Long privIdStart = 60650L;
+		Long menuIdStart = 168260L;
+		Long privIdStart = 60670L;
 		int seqIncr = 20;
 
 		Menu menu = parseMenu();
