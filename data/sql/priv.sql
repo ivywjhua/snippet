@@ -271,3 +271,6 @@ values ('60756', 'PPC-NSC-SQ-Q-P', '库存查询-查询', 'Y', '168346', 'SNDA-w
 insert into tb_adm_permission (ID, PERMISSION_KEY, DESCRIPTION, STATUS, MENU_ID, CREATOR, GMT_CREATE, GMT_MODIFIED, MEMO)
 values ('60757', 'PPC-NSC-SQ-PAR-P', '库存查询-卡面额', 'Y', '168347', 'SNDA-wangjinhua', '2011-12-28 14:50:33.000000', '2011-12-28 14:50:40.000000', '');
 
+insert into tb_adm_permission (ID, PERMISSION_KEY, DESCRIPTION, STATUS, MENU_ID, CREATOR, GMT_CREATE, GMT_MODIFIED, MEMO)
+values ('60758', 'PPC-NSC-SQ-FDETAIL-P', '库存查询-工厂明细', 'Y', '168348', 'SNDA-wangjinhua', '2011-12-28 14:50:33.000000', '2011-12-28 14:50:40.000000', '');
+

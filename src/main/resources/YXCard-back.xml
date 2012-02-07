@@ -103,5 +103,6 @@
 	<menu id="PPC-NSC-SQ" name="库存查询" sort="8">
 		<menu id="PPC-NSC-SQ-Q" name="库存查询-查询" sort="81" actionUrl="/storage/query.do"/>
 		<menu id="PPC-NSC-SQ-PAR" name="库存查询-卡面额" sort="0" actionUrl="/card/queryCardParByType.do" actionType="B"/>
+		<menu id="PPC-NSC-SQ-FDETAIL" name="库存查询-工厂明细" sort="0" actionUrl="/storage/queryFactoryStorage.do" actionType="B"/>
 	</menu>
 </menu>

@@ -271,3 +271,6 @@ values ('168346', 'PPC-NSC-SQ-Q', '库存查询-查询', '/storage/query.do', ''
 insert into tb_adm_menu (ID, MENU_CODE, MENU_NAME, ACTION_URL, IMG_URL, SORT, DESCRIPTION, STATUS, ACTION_TYPE, PARENT_ID, CREATOR, GMT_CREATE, GMT_MODIFIED, MEMO)
 values ('168347', 'PPC-NSC-SQ-PAR', '库存查询-卡面额', '/card/queryCardParByType.do', '', '0', 'http://localtest:5050/yxcard-management-web', 'Y', 'B', '168345', 'SNDA-wangjinhua', '2011-12-28 14:42:29.000000', '2011-12-28 14:42:29.000000', '');
 
+insert into tb_adm_menu (ID, MENU_CODE, MENU_NAME, ACTION_URL, IMG_URL, SORT, DESCRIPTION, STATUS, ACTION_TYPE, PARENT_ID, CREATOR, GMT_CREATE, GMT_MODIFIED, MEMO)
+values ('168348', 'PPC-NSC-SQ-FDETAIL', '库存查询-工厂明细', '/storage/queryFactoryStorage.do', '', '0', 'http://localtest:5050/yxcard-management-web', 'Y', 'B', '168345', 'SNDA-wangjinhua', '2011-12-28 14:42:29.000000', '2011-12-28 14:42:29.000000', '');
+
