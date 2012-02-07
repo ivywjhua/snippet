@@ -15,7 +15,7 @@ import org.xml.sax.SAXException;
 public class UAMSqlGenrateTool {
 
 	private static final String MENU_CLASS = "org.txxfu.sqltool.Menu";
-	private static final String CONTEXT_PATH = "http://localtest:8088/yxcard-management-web";
+	private static final String CONTEXT_PATH = "http://localtest:5050/yxcard-management-web";
 	private static ResourceLoader resourceLoader = new DefaultResourceLoader();
 
 	static Menu parseMenu() throws IOException, SAXException {

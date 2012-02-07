@@ -3,10 +3,10 @@
 <menu id="PPC-NEW-SALE-CARD" name="新售卡" >
 	<menu id="PPC-NSC-OM" name="订单管理" sort="1">
 		<menu id="PPC-NSC-OM-QUERY" name="订单管理-订单查询" sort="12" actionUrl="/order/bgorderlist.do"/>
-		<menu id="PPC-NSC-OM-DETAIL" name="订单管理-订单详情" sort="13" actionUrl="/order/bgorderdetail.do"/>
-		<menu id="PPC-NSC-OM-HIS" name="订单管理-审批记录" sort="14" actionUrl="/order/bgorderhistory.do"/>
-		<menu id="PPC-NSC-OM-ACT-REC" name="订单管理-激活记录" sort="15" actionUrl="/order/bgcardsegactivation.do"/>
-		<menu id="PPC-NSC-OM-ASS-REC" name="订单管理-分配记录" sort="16" actionUrl="/order/bgcardsegdistribution.do"/>
+		<menu id="PPC-NSC-OM-DETAIL" name="订单管理-订单详情" sort="13" actionUrl="/order/bgorderdetail.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-HIS" name="订单管理-审批记录" sort="14" actionUrl="/order/bgorderhistory.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-ACT-REC" name="订单管理-激活记录" sort="15" actionUrl="/order/bgcardsegactivation.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-ASS-REC" name="订单管理-分配记录" sort="16" actionUrl="/order/bgcardsegdistribution.do" actionType="B"/>
 		<!-- allocate card -->
 		<menu id="PPC-NSC-OM-AC-LIST" name="销售分配卡号" sort="17" actionUrl="/sale/cardallocatedorderlist.do"/>
 		<menu id="PPC-NSC-OM-AC-DETAIL" name="销售分配卡号详情" sort="0" actionUrl="/sale/cardallocatedorderdetail.do" actionType="B"/>
@@ -21,26 +21,26 @@
 	<menu id="PPC-NSC-OM-VER" name="订单审核" sort="2">
 		<!-- sale -->
 		<menu id="PPC-NSC-OM-VER-LIST" name="订单审核-列表" sort="22" actionUrl="/audit/orderlist.do"/>
-		<menu id="PPC-NSC-OM-VER-SDETAIL" name="订单审核-销售订单详情" sort="23" actionUrl="/sale/orderdetail.do"/>
-		<menu id="PPC-NSC-OM-VER-SHIS" name="订单审核-销售审批记录" sort="24" actionUrl="/sale/orderhistory.do"/>
-		<menu id="PPC-NSC-OM-VER-SAUDIT" name="订单审核-销售审核订单" sort="25" actionUrl="/sale/auditorder.do"/>
+		<menu id="PPC-NSC-OM-VER-SDETAIL" name="订单审核-销售订单详情" sort="23" actionUrl="/sale/orderdetail.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-VER-SHIS" name="订单审核-销售审批记录" sort="24" actionUrl="/sale/orderhistory.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-VER-SAUDIT" name="订单审核-销售审核订单" sort="25" actionUrl="/sale/auditorder.do" actionType="B"/>
 		<menu id="PPC-NSC-OM-VER-SAVEAUDIT" name="订单审核-销售确认审核" sort="26" actionUrl="/sale/cardsegdistribute.do" actionType="B"/>
 		<!-- cashier -->
-		<menu id="PPC-NSC-OM-VER-CDETAI" name="订单审核-出纳订单详情" sort="27" actionUrl="/cashier/orderdetail.do"/>
-		<menu id="PPC-NSC-OM-VER-CHIS" name="订单审核-出纳审批记录" sort="28" actionUrl="/cashier/orderhistory.do"/>
-		<menu id="PPC-NSC-OM-VER-CAUDIT" name="订单审核-出纳审核订单" sort="29" actionUrl="/cashier/auditorder.do"/>
+		<menu id="PPC-NSC-OM-VER-CDETAI" name="订单审核-出纳订单详情" sort="27" actionUrl="/cashier/orderdetail.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-VER-CHIS" name="订单审核-出纳审批记录" sort="28" actionUrl="/cashier/orderhistory.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-VER-CAUDIT" name="订单审核-出纳审核订单" sort="29" actionUrl="/cashier/auditorder.do" actionType="B"/>
 		<menu id="PPC-NSC-OM-VER-CSAVEAUDIT" name="订单审核-出纳确认审核" sort="30" actionUrl="/cashier/saveAuditOrder.do" actionType="B"/>
 		<!-- finance -->
-		<menu id="PPC-NSC-OM-VER-FDETAIL" name="订单审核-财务订单详情" sort="31" actionUrl="/finance/orderdetail.do"/>
-		<menu id="PPC-NSC-OM-VER-FHIS" name="订单审核-财务审批记录" sort="32" actionUrl="/finance/orderhistory.do"/>
-		<menu id="PPC-NSC-OM-VER-F-ASS-REC" name="订单审核-财务卡号段分配记录" sort="33" actionUrl="/finance/cardsegdistribution.do"/>
-		<menu id="PPC-NSC-OM-VER-F-AUDIT" name="订单审核-财务审核订单" sort="34" actionUrl="/finance/auditorder.do"/>
+		<menu id="PPC-NSC-OM-VER-FDETAIL" name="订单审核-财务订单详情" sort="31" actionUrl="/finance/orderdetail.do"  actionType="B"/>
+		<menu id="PPC-NSC-OM-VER-FHIS" name="订单审核-财务审批记录" sort="32" actionUrl="/finance/orderhistory.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-VER-F-ASS-REC" name="订单审核-财务卡号段分配记录" sort="33" actionUrl="/finance/cardsegdistribution.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-VER-F-AUDIT" name="订单审核-财务审核订单" sort="34" actionUrl="/finance/auditorder.do" actionType="B"/>
 		<menu id="PPC-NSC-OM-VER-F-SAVEAUDIT" name="订单审核-财务确认审核" sort="35" actionUrl="/finance/saveAuditOrder.do" actionType="B"/>
 	</menu>
 	<menu id="PPC-NSC-OM-I" name="干预订单" sort="3">
 		<menu id="PPC-NSC-OM-I-LIST" name="干预订单-列表" sort="41" actionUrl="/sale/intervorderlist.do"/>
-		<menu id="PPC-NSC-OM-I-DETAIL" name="干预订单-订单详情" sort="42" actionUrl="/sale/intervorderdetail.do"/>
-		<menu id="PPC-NSC-OM-I-HIS" name="干预订单-审批记录" sort="43" actionUrl="/sale/intervorderhistory.do"/>
+		<menu id="PPC-NSC-OM-I-DETAIL" name="干预订单-订单详情" sort="42" actionUrl="/sale/intervorderdetail.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-I-HIS" name="干预订单-审批记录" sort="43" actionUrl="/sale/intervorderhistory.do" actionType="B"/>
 		<menu id="PPC-NSC-OM-I-MC" name="干预订单-手动查款" sort="44" actionUrl="/sale/manualcheck.do" actionType="B"/>
 		<menu id="PPC-NSC-OM-I-CANCEL" name="干预订单-取消订单" sort="45" actionUrl="/sale/ordercancel.do" actionType="B"/>
 	</menu>
