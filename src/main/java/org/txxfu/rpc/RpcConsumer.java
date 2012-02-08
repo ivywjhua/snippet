@@ -12,8 +12,8 @@ public class RpcConsumer {
 		final HelloService helloService = RpcFramework.refer(
 				HelloService.class, "127.0.0.1", 21234);
 
-		int threadNum = 1000;
-		final int invokeNum = 20;
+		int threadNum = 50;
+		final int invokeNum = 50;
 		final AtomicInteger count = new AtomicInteger();
 		for (int i = 0; i < threadNum; i++) {
 			final int t = i;
@@ -22,9 +22,11 @@ public class RpcConsumer {
 				@Override
 				public void run() {
 					for (int j = 0; j < invokeNum; j++) {
+						@SuppressWarnings("unused")
 						String sayHello = helloService.sayHello("World " + j);
+						String sayHello2 = helloService.sayHello("name", count.get());
 						count.incrementAndGet();
-						System.out.println("thread\t" + t + "\t " + sayHello + "\t" + count.get());
+						System.out.println("thread\t" + t + "\t " + sayHello2 + "\t" + count.get());
 					}
 				}
 			}).start();

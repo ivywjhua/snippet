@@ -10,9 +10,23 @@ import java.lang.reflect.Proxy;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * 每一次RPC, Server都新起一个线程。 Client 新建一个socket连接到Server，写入数据，然后等待数据返回，关闭连接和socket
+ * Server为每个连接新建一个线程，读出数据，反射执行，写回数据，关闭连接和socket
+ * 
+ * @author txxfu
+ * 
+ */
 public class RpcFramework {
 
 	public static void export(final Object service, int port) throws Exception {
+		if (null == service) {
+			throw new IllegalArgumentException("service instance null");
+		}
+		if (port <= 0 || port > 65535) {
+			throw new IllegalArgumentException("invalid port " + port);
+		}
+
 		ServerSocket serverSocket = new ServerSocket(port);
 		while (true) {
 			final Socket socket = serverSocket.accept();
@@ -21,11 +35,24 @@ public class RpcFramework {
 	}
 
 	@SuppressWarnings("unchecked")
-	public static <T> T refer(Class<?> clazz, final String host, final int port) {
-		return (T) Proxy
-				.newProxyInstance(clazz.getClassLoader(),
-						new Class[] { clazz }, new ServiceInvocationHandler(
-								host, port));
+	public static <T> T refer(Class<?> serviceClazz, final String host,
+			final int port) {
+		if (null == serviceClazz) {
+			throw new IllegalArgumentException("service class null");
+		}
+		if (!serviceClazz.isInterface()) {
+			throw new IllegalArgumentException("service class is not interface");
+		}
+		if (null == host || host.isEmpty()) {
+			throw new IllegalArgumentException("invalid host " + host);
+		}
+		if (port <= 0 || port > 65535) {
+			throw new IllegalArgumentException("invalid port " + port);
+		}
+
+		return (T) Proxy.newProxyInstance(serviceClazz.getClassLoader(),
+				new Class[] { serviceClazz }, new ServiceInvocationHandler(
+						host, port));
 	}
 
 	private static void closeQuietly(Closeable obj) throws IOException {
