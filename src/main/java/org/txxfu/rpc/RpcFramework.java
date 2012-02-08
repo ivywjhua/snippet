@@ -14,6 +14,9 @@ import java.net.Socket;
  * 每一次RPC, Server都新起一个线程。 Client 新建一个socket连接到Server，写入数据，然后等待数据返回，关闭连接和socket
  * Server为每个连接新建一个线程，读出数据，反射执行，写回数据，关闭连接和socket
  * 
+ * 改进方面
+ * Client端启用连接池, 支持异步回调
+ * 
  * @author txxfu
  * 
  */
