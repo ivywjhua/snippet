@@ -7,6 +7,8 @@
 		<menu id="PPC-NSC-OM-HIS" name="订单管理-审批记录" sort="14" actionUrl="/order/bgorderhistory.do" actionType="B"/>
 		<menu id="PPC-NSC-OM-ACT-REC" name="订单管理-激活记录" sort="15" actionUrl="/order/bgcardsegactivation.do" actionType="B"/>
 		<menu id="PPC-NSC-OM-ASS-REC" name="订单管理-分配记录" sort="16" actionUrl="/order/bgcardsegdistribution.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-BGD-LIST" name="后台发货单查询" sort="0" actionUrl="/order/bgdeliverylist.do" actionType="B"/>
+		<menu id="PPC-NSC-OM-BGD-DETAIL" name="后台发货单明细" sort="0" actionUrl="/order/bgdeliverydetail.do" actionType="B"/>
 		<!-- allocate card -->
 		<menu id="PPC-NSC-OM-AC-LIST" name="销售分配卡号" sort="17" actionUrl="/sale/cardallocatedorderlist.do"/>
 		<menu id="PPC-NSC-OM-AC-DETAIL" name="销售分配卡号详情" sort="0" actionUrl="/sale/cardallocatedorderdetail.do" actionType="B"/>

@@ -50,8 +50,8 @@ public class UAMSqlGenrateTool {
 	}
 
 	public static void main(String[] args) throws IOException, SAXException {
-		Long menuIdStart = 168260L;
-		Long privIdStart = 60670L;
+		Long menuIdStart = 168375L;
+		Long privIdStart = 60680L;
 		int seqIncr = 20;
 
 		Menu menu = parseMenu();
