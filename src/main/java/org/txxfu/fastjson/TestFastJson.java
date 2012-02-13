@@ -16,9 +16,10 @@ public class TestFastJson {
 		String str = FileUtils.readFileToString(new File("data/json/json1"));
 		Object json = JSON.parse(str);
 		System.out.println(json);
-		
+//		System.out.println(json.to);
 	}
 
+	@SuppressWarnings("unused")
 	private static void testEnumAndPos() {
 		System.out.println("feature size: " + Feature.values().length);
 		System.out.println("SerializerFeature size: "
