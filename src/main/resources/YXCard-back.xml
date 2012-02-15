@@ -56,7 +56,7 @@
 		<menu id="PPC-NSC-DM-ADD" name="经销商管理-新建" sort="0" actionUrl="/dealer/add.do" actionType="B"/>
 		<menu id="PPC-NSC-DM-UPDATE-SHOW" name="经销商管理-更新显示" sort="0" actionUrl="/dealer/show_update.do" actionType="B"/>
 		<menu id="PPC-NSC-DM-UPDATE" name="经销商管理-更新" sort="0" actionUrl="/dealer/update.do" actionType="B"/>
-		<menu id="PPC-NSC-DM-FIND-CITIES" name="经销商管理-城市列表" sort="0" actionUrl="/factory/get_cities.do" actionType="B"/>
+		<menu id="PPC-NSC-DM-FIND-CITIES" name="经销商管理-城市列表" sort="0" actionUrl="/dealer/get_cities.do" actionType="B"/>
 		<!-- biz setting -->
 		<menu id="PPC-NSC-DM-AUTH" name="经销商管理-业务授权" sort="0" actionUrl="/dealer/dealer_auth_list.do" actionType="B"/>
 		<menu id="PPC-NSC-DM-AUTH-ADD" name="经销商管理-增加业务授权" sort="0" actionUrl="/dealer/dealer_auth_add.do" actionType="B"/>

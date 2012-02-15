@@ -149,7 +149,7 @@ insert into tb_adm_menu (ID, MENU_CODE, MENU_NAME, ACTION_URL, IMG_URL, SORT, DE
 values ('168422', 'PPC-NSC-DM-UPDATE', '经销商管理-更新', '/dealer/update.do', '', '0', 'http://localtest:5050/yxcard-management-web', 'Y', 'B', '168417', 'SNDA-wangjinhua', '2011-12-28 14:42:29.000000', '2011-12-28 14:42:29.000000', '');
 
 insert into tb_adm_menu (ID, MENU_CODE, MENU_NAME, ACTION_URL, IMG_URL, SORT, DESCRIPTION, STATUS, ACTION_TYPE, PARENT_ID, CREATOR, GMT_CREATE, GMT_MODIFIED, MEMO)
-values ('168423', 'PPC-NSC-DM-FIND-CITIES', '经销商管理-城市列表', '/factory/get_cities.do', '', '0', 'http://localtest:5050/yxcard-management-web', 'Y', 'B', '168417', 'SNDA-wangjinhua', '2011-12-28 14:42:29.000000', '2011-12-28 14:42:29.000000', '');
+values ('168423', 'PPC-NSC-DM-FIND-CITIES', '经销商管理-城市列表', '/dealer/get_cities.do', '', '0', 'http://localtest:5050/yxcard-management-web', 'Y', 'B', '168417', 'SNDA-wangjinhua', '2011-12-28 14:42:29.000000', '2011-12-28 14:42:29.000000', '');
 
 insert into tb_adm_menu (ID, MENU_CODE, MENU_NAME, ACTION_URL, IMG_URL, SORT, DESCRIPTION, STATUS, ACTION_TYPE, PARENT_ID, CREATOR, GMT_CREATE, GMT_MODIFIED, MEMO)
 values ('168424', 'PPC-NSC-DM-AUTH', '经销商管理-业务授权', '/dealer/dealer_auth_list.do', '', '0', 'http://localtest:5050/yxcard-management-web', 'Y', 'B', '168417', 'SNDA-wangjinhua', '2011-12-28 14:42:29.000000', '2011-12-28 14:42:29.000000', '');
