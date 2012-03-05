@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<menu id="PPC-MAKE-CARD2" name="制卡2" >
+	<menu id="PPC-MC2-ORDER-SHOW" name="制卡订单申请" sort="1" actionUrl="/order/show.htm"/>
+	<menu id="PPC-MC2-ORDER-SUBMIT" name="制卡订单提交" sort="0" actionUrl="/order/submit.htm" actionType="B"/>
+	
+	<menu id="PPC-MC2-ORDER-QUERY" name="制卡订单查询" sort="2" actionUrl="/apply/query.htm"/>
+	<menu id="PPC-MC2-ORDER-DETAIL" name="制卡订单明细" sort="0" actionUrl="/apply/viewDetail.htm" actionType="B"/>
+	
+	<menu id="PPC-MC2-M2STYPE" name="根据制卡类型取售卡类型" sort="0" actionUrl="/apply/getStypeByMtype.htm" actionType="B"/>
+	<menu id="PPC-MC2-DOWNATTACH" name="下载申请单附件" sort="0" actionUrl="/apply/downloadAttach.htm" actionType="B"/>
+	<menu id="PPC-MC2-ASSIGNCARDNUM" name="分配卡号段" sort="0" actionUrl="/apply/genSegment.htm" actionType="B"/>
+	<menu id="PPC-MC2-NOTIFY-FAC" name="通知制卡厂" sort="0" actionUrl="/factory/doNotify.htm" actionType="B"/>
+	<menu id="PPC-MC2-FAC-RESP" name="获取制卡厂结果" sort="0" actionUrl="/factory/receiveResult.htm" actionType="B"/>
+	<menu id="PPC-MC2-DO-EXPORT" name="导出" sort="0" actionUrl="/export/doExport.htm" actionType="B"/>
+	<menu id="PPC-MC2-ORDER-ABANDON" name="作废" sort="0" actionUrl="/order/abandon.htm" actionType="B"/>
+	<menu id="PPC-MC2-EXPORT-MONITOR" name="入库监控" sort="0" actionUrl="/export/monitorAll.htm" actionType="B"/>
+	<menu id="PPC-MC2-MONITOR-D" name="监控单个订单入库情况" sort="0" actionUrl="/export/monitorDetail.htm " actionType="B"/>
+	
+</menu>
