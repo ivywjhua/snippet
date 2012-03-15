@@ -5,32 +5,32 @@ import java.util.List;
 
 public class SyncQueue2<T> implements AbstractQueue<T> {
 
-//	private Object syncLock = new Object();
+	private Object syncLock = new Object();
 
 	private List<T> queue = new ArrayList<T>();
 
 	@Override
 	public void putObject(T obj) {
-		synchronized (queue) {
+		synchronized (syncLock) {
 			while (queue.size() > 0) {
 				try {
-					queue.wait();
+					syncLock.wait();
 				} catch (InterruptedException e) {
 					//
 				}
 			}
 			queue.add(obj);
 			System.out.println(Thread.currentThread().getId() + " put " + obj);
-			queue.notify();
+			syncLock.notifyAll();
 		}
 	}
 
 	@Override
 	public T getObject() {
-		synchronized (queue) {
+		synchronized (syncLock) {
 			while (queue.size() == 0) {
 				try {
-					queue.wait();
+					syncLock.wait();
 				} catch (InterruptedException e) {
 					//
 				}
@@ -38,7 +38,7 @@ public class SyncQueue2<T> implements AbstractQueue<T> {
 			T obj = queue.get(0);
 			queue.clear();
 			System.out.println(Thread.currentThread().getId() + " get " + obj);
-			queue.notify();
+			syncLock.notifyAll();
 			return obj;
 		}
 	}

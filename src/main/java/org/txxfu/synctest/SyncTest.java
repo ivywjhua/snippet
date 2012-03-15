@@ -15,9 +15,8 @@ public class SyncTest {
 			Thread t2 = new Thread(gr);
 			threads.add(t1);
 			threads.add(t2);
-		}
-		for (Thread thread : threads) {
-			thread.start();
+			t1.start();
+			t2.start();
 		}
 	}
 }
