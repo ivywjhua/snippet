@@ -15,12 +15,13 @@ import org.xml.sax.SAXException;
 public class MakeCard2Sql {
 
 	private static final String MENU_CLASS = "org.txxfu.sqltool.Menu";
-	private static final String CONTEXT_PATH = "http://localtest:7070/makecard-web2.0";
+//	private static final String CONTEXT_PATH = "http://localtest:7070/makecard-web2.0";
+	private static final String CONTEXT_PATH = "http://ppcoss.shengpay.com/makecard-web2.0";
 	private static ResourceLoader resourceLoader = new DefaultResourceLoader();
 
 	public static void main(String[] args) throws IOException, SAXException {
-		Long menuIdStart = 168567L;
-		Long privIdStart = 60951L;
+		Long menuIdStart = 168192L;
+		Long privIdStart = 60613L;
 		int seqIncr = 20;
 
 		Menu menu = parseMenu();
