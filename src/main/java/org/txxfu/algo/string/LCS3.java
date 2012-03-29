@@ -9,7 +9,7 @@ public class LCS3 {
 
 	enum LcsDirect {
 
-		kinit(0), kleft(1), kup(2), kleftup(3);
+		kinit(0), kleft(1), kup(2), kleftup(3), kzz(4);
 
 		int value;
 
@@ -49,7 +49,7 @@ public class LCS3 {
 						lcsch[i][j] = str1.charAt(i);
 					} else {
 						lcslen[i][j] = lcslen[i - 1][j - 1];
-						lcsdir[i][j] = LcsDirect.kleftup.value;
+						lcsdir[i][j] = LcsDirect.kzz.value;
 						lcsch[i][j] = lcsch[i-1][j-1];
 					}
 				} else if (lcslen[i - 1][j] > lcslen[i][j - 1]) {
@@ -65,6 +65,8 @@ public class LCS3 {
 		}
 
 		printArray(lcslen);
+		printArray(lcsdir);
+		printArray(lcsch);
 		
 		// print lcs str
 		lcsPrint(str1, str2, lcsdir, length1 - 1, length2 - 1);
@@ -93,6 +95,11 @@ public class LCS3 {
 		} else if (lcsdir[row][col] == LcsDirect.kup.value) {
 			if (row > 0) {
 				lcsPrint(str1, str2, lcsdir, row - 1, col);
+			}
+		}
+		else if (lcsdir[row][col] == LcsDirect.kzz.value) {
+			if (row > 0) {
+				lcsPrint(str1, str2, lcsdir, row - 1, col -1);
 			}
 		}
 
